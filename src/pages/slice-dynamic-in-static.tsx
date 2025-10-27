@@ -5,7 +5,11 @@ export default function Page() {
     <>
       <h4 className="font-bold">Dynamic slice in Static page</h4>
       <Static>
-        <Slice id="dynamic" />
+        <Slice
+          id="dynamic"
+          lazy
+          fallback={<div>loading dynamic slice...</div>}
+        />
       </Static>
     </>
   );
